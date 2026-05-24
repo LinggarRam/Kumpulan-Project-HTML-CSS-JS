@@ -1,0 +1,327 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-container > h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.button-section {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.button-section h2 {
+    color: #fff;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+/* ========== BUTTON 1 STYLES ========== */
+.btn1-container {
+    background: rgb(16, 16, 16);
+    border-radius: 10px;
+}
+
+.btn1 {
+    text-decoration: none;
+    color: antiquewhite;
+    border: 2px solid antiquewhite;
+    padding: 2rem 5rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 1s;
+    display: inline-block;
+}
+
+.btn1:before {
+    content: "DOWNLOAD";
+    font-weight: 900;
+    color: #000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: antiquewhite;
+    transform: translateY(-100%);
+    transition: all 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn1:hover:before {
+    transform: translateY(0);
+}
+
+/* ========== BUTTON 2 STYLES ========== */
+.btn2-container {
+    background: #f0f0f0;
+    border-radius: 10px;
+}
+
+.btn2 {
+    padding: 2rem 3rem;
+    text-transform: uppercase;
+    background-color: blueviolet;
+    color: #fff;
+    font-size: 1.5rem;
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn2::before {
+    content: "button";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: crimson;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateX(270deg);
+    transform-origin: top;
+    transition: all 0.5s;
+}
+
+.btn2::after {
+    content: "button";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(14, 231, 14);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateX(270deg);
+    transform-origin: top;
+    transition: all 0.5s;
+    transition-delay: 0.25s;
+}
+
+.btn2:hover::before,
+.btn2:hover::after {
+    transform: rotateX(0);
+}
+
+/* ========== BUTTON 3 STYLES ========== */
+.btn3-container {
+    background: #2c2c2c;
+    border-radius: 10px;
+}
+
+.btn3 {
+    width: 300px;
+    height: 60px;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: transparent;
+    text-align: center;
+    line-height: 60px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    position: relative;
+    transition: all 0.2s;
+    color: #fff;
+    display: inline-block;
+}
+
+.btn3:before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: 100%;
+    height: 100%;
+    background: #06c988a4;
+    z-index: -1;
+    mix-blend-mode: multiply;
+    transition: all 0.2s;
+    transform-origin: top;
+}
+
+.btn3:after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 100%;
+    height: 100%;
+    background: #ffff00a6;
+    z-index: -1;
+    mix-blend-mode: multiply;
+    transition: all 0.2s;
+    transform-origin: bottom;
+}
+
+.btn3:hover:before {
+    top: -6px;
+    left: 0;
+    transform: perspective(1000px) rotateX(75deg);
+}
+
+.btn3:hover:after {
+    top: 6px;
+    left: 0;
+    transform: perspective(1000px) rotateX(-75deg);
+}
+
+.btn3:hover {
+    color: #000;
+}
+
+/* ========== BUTTON 4 STYLES ========== */
+.btn4-container {
+    background: crimson;
+    border-radius: 10px;
+}
+
+.btn4 {
+    border: none;
+    padding: 1rem 4rem;
+    background: rgba(17, 17, 137, 0.824);
+    color: #fff;
+    font-size: 22px;
+    text-transform: uppercase;
+    position: relative;
+    cursor: pointer;
+}
+
+.btn4:before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: -10px;
+    left: -10px;
+    border-top: 4px solid darkblue;
+    border-left: 4px solid darkblue;
+    transition: all 0.25s;
+}
+
+.btn4:hover:before,
+.btn4:hover:after {
+    height: 100%;
+    width: 100%;
+}
+
+.btn4:after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    bottom: -10px;
+    right: -10px;
+    border-bottom: 4px solid darkblue;
+    border-right: 4px solid darkblue;
+    transition: all 0.25s;
+}
+
+/* ========== BUTTON 5 STYLES ========== */
+.btn5-container {
+    background: #000;
+    border-radius: 10px;
+}
+
+.btn5 {
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem 4rem;
+    background: #fff;
+    color: #000;
+    border-radius: 100px;
+    font-size: 1.5rem;
+    transition: all 0.2s;
+    display: inline-block;
+}
+
+.btn5:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 100px;
+    transition: all 1s;
+    z-index: -1;
+}
+
+.btn5:hover:before {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn5:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn5:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-container > h1 {
+        font-size: 2rem;
+    }
+
+    .button-section h2 {
+        font-size: 1.2rem;
+    }
+
+    .btn1,
+    .btn2,
+    .btn3,
+    .btn4,
+    .btn5 {
+        font-size: 1rem;
+        padding: 1rem 2rem;
+    }
+
+    .btn3 {
+        width: 250px;
+        height: 50px;
+        line-height: 50px;
+    }
+}
