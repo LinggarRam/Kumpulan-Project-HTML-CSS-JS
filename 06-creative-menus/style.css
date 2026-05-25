@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container > h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.menus {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.menus h2 {
+    color: #fff;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.menus-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px;
+}
+
+.menus1-container {
+    background: #000;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ul-menus1 {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.ul-menus1 .li-menus1 {
+    list-style: none;
+}
+
+.ul-menus1 .li-menus1 .a-menus1 {
+    text-decoration: none;
+    color: #fff;
+    font-size: 22px;
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+.a-menus1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transform: scaleX(0);
+    transition: all 1s;
+    transform-origin: left;
+}
+
+.ul-menus1 .li-menus1 .a-menus1:hover::before,
+.ul-menus1 .li-menus1 .a-menus1:hover::after {
+    transform: scaleX(1);
+}
+
+.a-menus1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transform: scaleX(0);
+    transition: all 1s;
+    transform-origin: right;
+}
+
+.menus2-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background: dimgrey;
+}
+
+.ul-menus2 {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.li-menus2 {
+    list-style: none;
+}
+
+.a-menus2 {
+    position: relative;
+    display: block;
+    padding: 15px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    font-size: 22px;
+    font-weight: bold;
+    transition: 1s;
+}
+
+.a-menus2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: scaleY(2);
+    transition: 1s;
+    border-top: 2px solid crimson;
+    border-bottom: 2px solid crimson;
+}
+
+.a-menus2:hover::before {
+    transform: scaleY(1.2);
+    opacity: 1;
+}
+
+.a-menus2::after {
+    content: "";
+    background: crimson;
+    position: absolute;
+    top: 2;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    transform: scale(0);
+    z-index: -1;
+}
+
+.a-menus2:hover::after {
+    transform: scale(1);
+}
+
+.a-menus2:hover {
+    color: #fff;
+}
+
+
+.menus3-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background: #000;
+}
+
+.ul-menus3 {
+    display: flex;
+}
+
+.li-menus3 {
+    list-style: none;
+}
+
+.ul-menus3 .li-menus3 .a-menus3 {
+    color: #fff;
+    font-size: 22px;
+    text-decoration: none;
+    padding: 0.4rem 1rem;
+    margin: 0 10px;
+    position: relative;
+    transition: all 0.5s;
+    text-transform: uppercase;
+}
+
+.a-menus3::before {
+    content: "";
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    width: 12px;
+    height: 12px;
+    border: 3px solid white;
+    border-width: 0 0 3px 3px;
+    opacity: 0;
+    transition: all 0.6s;
+}
+
+.a-menus3:hover::before {
+    opacity: 1;
+    bottom: -8px;
+    left: -8px;
+}
+
+.a-menus3::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 12px;
+    height: 12px;
+    border: 3px solid white;
+    border-width: 3px 3px 0 0;
+    opacity: 0;
+    transition: all 0.6s;
+}
+
+.a-menus3:hover::after{
+    opacity: 1;
+    top: -8px;
+    right: -8px;
+}
